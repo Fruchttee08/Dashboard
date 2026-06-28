@@ -4,9 +4,10 @@ Dieses Repository enthält ein interaktives Dashboard, das mit Python und der GU
 
 Voraussetzungen
 Stelle sicher, dass die folgenden Komponenten auf deinem Computer installiert sind:
-	Python >3.14
-	pip 
-	git
+
+		Python >3.14
+		pip 
+		git
 
 Installation in 4 Schritten
 1. Repository klonen
