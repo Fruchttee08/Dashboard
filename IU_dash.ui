@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>947</width>
+    <height>663</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>IU Dashboard App</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Verwaltung">
+       <attribute name="title">
+        <string>Verwaltung</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_Verwaltung">
+        <item>
+         <widget class="QGroupBox" name="groupAddCourse">
+          <property name="title">
+           <string>Kurs verwalten</string>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <layout class="QHBoxLayout" name="_2">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="0" column="5">
+              <widget class="QPushButton" name="pushButtonExamdelete">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Klausur stornieren</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0" colspan="6">
+              <widget class="QGroupBox" name="groupBox">
+               <property name="title">
+                <string>Klausurergebnis aktualisieren</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_groupbox">
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_7">
+                  <item row="0" column="1">
+                   <widget class="QDoubleSpinBox" name="doubleSpinBoxGradeExam">
+                    <property name="prefix">
+                     <string>Note: </string>
+                    </property>
+                    <property name="minimum">
+                     <double>1.000000000000000</double>
+                    </property>
+                    <property name="maximum">
+                     <double>6.000000000000000</double>
+                    </property>
+                    <property name="singleStep">
+                     <double>0.100000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>1.000000000000000</double>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QPushButton" name="pushButtonExamresultupdate">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>Ergebnis aktualisieren</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QComboBox" name="comboBoxExamSelect">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>95</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Klausur auswählen</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>3</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QPushButton" name="pushButtonExamadd">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Klausur buchen</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QDateEdit" name="dateEditCourseExam">
+               <property name="date">
+                <date>
+                 <year>2026</year>
+                 <month>1</month>
+                 <day>1</day>
+                </date>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QComboBox" name="comboBoxCourseSelect">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>95</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Kurs auswählen</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidgetCourses">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+          </property>
+          <property name="columnCount">
+           <number>14</number>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>105</number>
+          </attribute>
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Semester</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Kurscode</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Kursname</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ECTS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Klausur1</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Datum1</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Note1</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Klausur2</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Datum2</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Note2</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Klausur3</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Datum3</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Note3</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_Goal">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Zielnote: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="doubleSpinBoxGradeGoal">
+            <property name="prefix">
+             <string>Note: </string>
+            </property>
+            <property name="minimum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>6.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.100000000000000</double>
+            </property>
+            <property name="value">
+             <double>2.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_Goal">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Dashboard">
+       <attribute name="title">
+        <string>Dashboard</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_Dashboard">
+        <item row="0" column="0">
+         <widget class="QWidget" name="widgetChartBL" native="true">
+          <layout class="QGridLayout" name="gridLayout"/>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="widgetChartTR" native="true">
+          <layout class="QGridLayout" name="gridLayout_2"/>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QWidget" name="widgetChartBL_2" native="true">
+          <layout class="QGridLayout" name="gridLayout_3"/>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QWidget" name="widgetChartBR" native="true">
+          <layout class="QGridLayout" name="gridLayout_4"/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>947</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBeenden">
+   <property name="text">
+    <string>Beenden</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

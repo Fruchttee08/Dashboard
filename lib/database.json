@@ -1,0 +1,482 @@
+[
+    {
+        "semester": 1,
+        "kurse": [
+            {
+                "kurscode": "DLBDSEAIS01-01_D",
+                "kursname": "Artificial Intelligence",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 1,
+                "klausur": [
+                    {
+                        "datum": "2025-01-08",
+                        "_ergebnis": 1.0
+                    },
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSIPWP01_D",
+                "kursname": "Einführung in die Programmierung mit Python",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 1,
+                "klausur": [
+                    {
+                        "datum": "2025-01-08",
+                        "_ergebnis": 2.0
+                    },
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBBIMD01",
+                "kursname": "Mathematik: Analysis",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 1,
+                "klausur": [
+                    {
+                        "datum": "2025-04-09",
+                        "_ergebnis": 2.7
+                    },
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 2,
+        "kurse": [
+            {
+                "kurscode": "DLBWIRITT01",
+                "kursname": "Einführung in das wissenschaftliche Arbeiten für IT und Technik",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 2,
+                "klausur": [
+                    {
+                        "datum": "2025-09-06",
+                        "_ergebnis": 2.0
+                    },
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSOOFPP01_D",
+                "kursname": "Projekt: Objektorientierte und funktionale Programmierung mit Python",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 2,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "WAHLPFLICHTBEREICH D",
+                "kursname": "Kollaboratives Arbeiten",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 2,
+                "klausur": [
+                    {
+                        "datum": "2024-09-08",
+                        "_ergebnis": 1.0
+                    },
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 3,
+        "kurse": [
+            {
+                "kurscode": "DLBBIM01",
+                "kursname": "Mathematik: Lineare Algebra",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 3,
+                "klausur": [
+                    {
+                        "datum": "2025-11-05",
+                        "_ergebnis": 2.3
+                    },
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSSPDS01_D",
+                "kursname": "Statistik - Wahrscheinlichkeit und deskriptive Statistik",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 3,
+                "klausur": [
+                    {
+                        "datum": "2025-09-06",
+                        "_ergebnis": 2.0
+                    },
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSSIS01_D",
+                "kursname": "Statistik - Induktive Statistik",
+                "ects": 5,
+                "kstatus": "bestanden",
+                "semester": 3,
+                "klausur": [
+                    {
+                        "datum": "2026-02-09",
+                        "_ergebnis": 3.0
+                    },
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 4,
+        "kurse": [
+            {
+                "kurscode": "DLBAIINLP01_D",
+                "kursname": "Einführung in NLP",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 4,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBAIPNLP01_D",
+                "kursname": "Projekt: NLP",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 4,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "WAHLPFLICHTBEREICH D",
+                "kursname": "Digitale Business-Modelle",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 4,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 5,
+        "kurse": [
+            {
+                "kurscode": "DLBDSMLSL01_D",
+                "kursname": "Maschinelles Lernen - Supervised Learning",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 5,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSMLUSL01_D",
+                "kursname": "Maschinelles Lernen - Unsupervised Learning und Feature Engineering",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 5,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSNNDL01-01_D",
+                "kursname": "Neuronale Netze und Deep Learning",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 5,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 6,
+        "kurse": [
+            {
+                "kurscode": "DLBAIICV01_D",
+                "kursname": "Einführung in Computer Vision",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 6,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBAIPCV01_D",
+                "kursname": "Projekt: Computer Vision",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 6,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "WAHLPFLICHTBEREICH D",
+                "kursname": "Projekt: Digitale Business-Modelle",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 6,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 7,
+        "kurse": [
+            {
+                "kurscode": "DLBAIIRL01_D",
+                "kursname": "Einführung in das Reinforcement Learning",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 7,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBISIC01",
+                "kursname": "Einführung in Datenschutz und IT-Sicherheit",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 7,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSCC01-01_D",
+                "kursname": "Cloud Computing",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 7,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 8,
+        "kurse": [
+            {
+                "kurscode": "DLBAIBESEI01_D",
+                "kursname": "Seminar: Ethische Innovation",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 8,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBSEPCP01_D",
+                "kursname": "Projekt: Cloud Programming",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 8,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "WAHLPFLICHTBEREICH D",
+                "kursname": "Projekt: KI-Exzellenz mit kreativen Prompt-Techniken",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 8,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 9,
+        "kurse": [
+            {
+                "kurscode": "DLBAIPEAI01_D",
+                "kursname": "Projekt: Edge AI",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 9,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "WAHLPFLICHTBEREICH A",
+                "kursname": "Augmented, Mixed und Virtual Reality",
+                "ects": 10,
+                "kstatus": "aktiv",
+                "semester": 9,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "WAHLPFLICHTBEREICH B",
+                "kursname": "Human-Computer Interaction",
+                "ects": 10,
+                "kstatus": "aktiv",
+                "semester": 9,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "WAHLPFLICHTBEREICH D",
+                "kursname": "Projekt: Generative KI im Unternehmenskontext",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 9,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 10,
+        "kurse": [
+            {
+                "kurscode": "WAHLPFLICHTBEREICH C",
+                "kursname": "Advanced Data Analysis",
+                "ects": 10,
+                "kstatus": "aktiv",
+                "semester": 10,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "DLBDSME01_D",
+                "kursname": "Model Engineering",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 10,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 11,
+        "kurse": [
+            {
+                "kurscode": "WAHLPFLICHTBEREICH D",
+                "kursname": "Project: Digitalization and Automation Hackathon",
+                "ects": 5,
+                "kstatus": "aktiv",
+                "semester": 11,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    {
+        "semester": 12,
+        "kurse": [
+            {
+                "kurscode": "BBAK01",
+                "kursname": "Bachelorarbeit",
+                "ects": 9,
+                "kstatus": "aktiv",
+                "semester": 12,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "kurscode": "BBAK02",
+                "kursname": "Kolloquium",
+                "ects": 1,
+                "kstatus": "aktiv",
+                "semester": 12,
+                "klausur": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    }
+]
