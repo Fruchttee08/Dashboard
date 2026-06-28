@@ -10,29 +10,37 @@ Stelle sicher, dass die folgenden Komponenten auf deinem Computer installiert si
 
 Installation in 4 Schritten
 1. Repository klonen
+
 Öffne dein Terminal (Eingabeaufforderung / PowerShell / Bash) und lade das Projekt herunter:
 
-git clone https://github.com/Fruchttee08/Dashboard.git
-cd Dashboard
+		git clone https://github.com/Fruchttee08/Dashboard.git
+		
+		cd Dashboard
 
-3. Virtuelle Umgebung erstellen (Empfohlen)
-Es wird dringend empfohlen, eine virtuelle Umgebung (venv) zu verwenden. 
+
+2. Virtuelle Umgebung erstellen (Empfohlen)
+Es wird dringend empfohlen, eine virtuelle Umgebung (venv) zu verwenden.
+
 Unter Windows:
 
-python -m venv venv
-.\venv\Scripts\activate
+		python -m venv venv
+		
+		.\venv\Scripts\activate
 
 Unter macOS / Linux:
+	
+		python3 -m venv venv
+		
+		source venv/bin/activate
 
-python3 -m venv venv
-source venv/bin/activate
 
-5. Abhängigkeiten installieren
+3. Abhängigkeiten installieren
 
-pip install --upgrade pip
-pip install -r requirements.txt
+		pip install --upgrade pip
+		
+		pip install -r requirements.txt
 
-7. Anwendung starten
+4. Anwendung starten
 Führe das Hauptskript aus, um das GUI-Dashboard zu öffnen.
 
-python IU_dash.py
+		python IU_dash.py
