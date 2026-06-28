@@ -19,6 +19,7 @@ class Datenbank():
 
     @staticmethod
     def _kurs_aus_dict(kurs_data):
+        # Erstellt ein Kurs-Objekt aus einem Dictionary, das die Kursinformationen enthält
         kurs = Kurs(
             kurscode=kurs_data.get("kurscode", ""),
             kursname=kurs_data.get("kursname", ""),
@@ -36,6 +37,7 @@ class Datenbank():
 
     @classmethod
     def _semester_aus_dict(cls, item):
+        # Erstellt ein Semester-Objekt aus einem Dictionary, das die Semesterinformationen enthält
         semester_nr = item.get("semester", 0)
         kurse_roh = item.get("kurse", [])
 
@@ -51,6 +53,7 @@ class Datenbank():
 
     @staticmethod
     def _semester_gruppieren(semester_liste):
+        # Gruppiert die Kurse nach Semester, falls sie nicht bereits gruppiert sind
         gruppiert = {}
         reihenfolge = []
         for semester in semester_liste:
@@ -61,6 +64,7 @@ class Datenbank():
         return [Semester(nr, gruppiert[nr]) for nr in reihenfolge]
 
     def lade_kurse(self):
+        # Lädt die Kursdaten aus der JSON-Datei und erstellt eine Liste von Semester-Objekten
         try:
             with open(self.pfad, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -80,7 +84,7 @@ class Datenbank():
 
     @staticmethod
     def _hole_kursliste():
-        # Erstelle Kursliste
+        # Gibt eine Standardliste von Kursen zurück, falls die Datenbank nicht gefunden oder ungültig ist
         return [
             Semester(1, [
                 Kurs("DLBDSEAIS01-01_D", "Artificial Intelligence", 5, "aktiv"),
