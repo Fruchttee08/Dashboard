@@ -78,7 +78,7 @@ class MainWindow:
 
 
     def _klausur_buchen(self):
-        # Aktuell ausgewählten Kurs abrufen
+        # Klausur des aktuell gewählten Kurses buchen
         try: 
             selected_kurs = self.kursauswahl.currentData()
         except ValueError:
@@ -106,6 +106,7 @@ class MainWindow:
         self._update_dashboard()
 
     def _klausur_stornieren(self):
+        # Klausur des aktuell ausgewählten Kurses stornieren
         try: 
             selected_kurs = self.kursauswahl.currentData()
         except ValueError:
@@ -125,6 +126,7 @@ class MainWindow:
         self._update_dashboard()
 
     def _ergebnis_aktualisieren(self):
+        # Aktualisiert das Ergebnis der ausgewählten Klausur des aktuell gewählten Kurses
         selected_kurs = self.kursauswahl.currentData()
 
         # Validierung: Kurs muss ausgewählt sein
@@ -153,6 +155,7 @@ class MainWindow:
         self._update_dashboard()
 
     def _tabelle_aktualisieren(self):
+        # Tabelle mit Kursinformationen und Klausurdaten aktualisieren
         self.tableWidgetKurse.setRowCount(len(self.kurse))
         for row, kurs in enumerate(self.kurse):
             self.tableWidgetKurse.setItem(row, 0, QTableWidgetItem(str(kurs.semester)))
@@ -174,6 +177,7 @@ class MainWindow:
                     self.tableWidgetKurse.setItem(row, base_col + 2, QTableWidgetItem(""))
 
     def _update_dashboard(self):
+        # Aktualisiert die Dashboard-Diagramme basierend auf den aktuellen Kursdaten und der Zielnote
         _dashboard = Dashboard()
 
         chart_view = _dashboard.update_chart_gesamtfortschritt(self.kurse)
@@ -191,17 +195,14 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     # Stelle sicher, dass die Logdatei im Verzeichnis der Anwendung liegt.
     if getattr(sys, "frozen", False):
-        # Wenn das Programm als Executable gebündelt wurde (PyInstaller/py2exe),
-        # liegt die ausführbare Datei in sys.executable
         base_dir = Path(sys.executable).resolve().parent
     else:
         # Im normalen Skriptbetrieb nutzen wir den Ordner der Quelldatei
         base_dir = Path(__file__).resolve().parent
-
     base_dir.mkdir(parents=True, exist_ok=True)
     log_path = base_dir / "app.log"
-
     logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler(str(log_path)), logging.StreamHandler()])
+    #Starte und schließe Anwendung
     mainwindow = MainWindow()
     mainwindow.window.showMaximized()
     sys.exit(app.exec())
