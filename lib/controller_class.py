@@ -16,7 +16,7 @@ class Studiengang:
 
 
     def klausur_buchen(self,kurs: Kurs, knr: int, kdat: str, semester_liste: list[Semester]) -> bool:
-    #sequentielle Klausurbuchung
+    # Bucht eine Klausur für einen Kurs, unter Berücksichtigung der sequentiellen Buchungsregeln
         idx = knr - 1
         if idx < 0 or idx > 2:
             logging.error(f"Fehler: ungültige Klausurnummer {knr}")
@@ -61,6 +61,7 @@ class Studiengang:
         
 
     def ergebnis_aktualisieren(self, kurs: Kurs, knr: int, knote: float, semester_liste: list[Semester]) -> bool:
+        # Aktualisiert das Ergebnis einer Klausur und setzt den Kursstatus entsprechend
         idx = knr - 1
         if idx < 0 or idx > 2:
             logging.error(f"Fehler: ungültige Klausurnummer {knr}")
@@ -79,6 +80,7 @@ class Studiengang:
             return False
 
     def klausur_stornieren(self, kurs, knr, semester_liste) -> bool:
+        # Storniert eine Klausur und setzt den Kursstatus auf "storniert"
         idx = knr - 1
         if idx < 0 or idx > 2:
             logging.error(f"Fehler: Klausur {knr} existiert nicht.")
@@ -94,4 +96,5 @@ class Studiengang:
             return False
 
     def lade_datenbank(self):
+        # Lädt die Kursdatenbank und gibt eine Liste von Semester-Objekten zurück
         return self.db.lade_kurse()
