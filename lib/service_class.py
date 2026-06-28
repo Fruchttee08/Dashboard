@@ -13,6 +13,7 @@ from PySide6.QtCharts import (
 )
 
 class Dashboard():
+    # Serviceklasse für die Erstellung und Aktualisierung von Diagrammen im Dashboard
     # Zentrale Farbpalette für ein einheitliches Dashboard-Design (PySide6 QColor)
     COLOR_BESTANDEN = QColor("#27ae60")  # Angenehmes Grün
     COLOR_GEBUCHT = QColor("#2980b9")    # Blau für "Aktiv" / "Gebucht" / "Geplant"
@@ -20,8 +21,8 @@ class Dashboard():
     COLOR_NEUTRAL = QColor("#7f8c8d")    # Grau für neutrale Werte
     
 
-    # Diese Klasse enthält die Logik zur Erstellung und Aktualisierung der Diagramme im Dashboard
     def update_chart_gesamtfortschritt(self, kurse):
+        # Erstellt ein Tortendiagramm, das den Gesamtfortschritt in ECTS-Punkten nach Kursstatus darstellt.
         chart = QChart()
         chart.setTitle("Gesamtfortschritt (ECTS nach Status)")
 
@@ -53,6 +54,7 @@ class Dashboard():
                 slice_segment = series.append(f"{status_bezeichnung} ({ects} ECTS)", ects)
                 
                 # Einheitliche Farbzuweisung via Klassenattribute
+                # Enumerationen wurden beim Speichern eingeführt, daher wird hier der Status in Kleinbuchstaben nur noch verglichen
                 if status_bezeichnung == "bestanden":
                     slice_segment.setBrush(self.COLOR_BESTANDEN)
                 elif status_bezeichnung == "gebucht":
@@ -74,10 +76,10 @@ class Dashboard():
         return chart_view
 
     def update_chart_studienverlauf(self, kurse):
+        # Erstellt ein Balkendiagramm, das den Studienverlauf in ECTS-Punkten nach Semester darstellt.
         chart = QChart()
         chart.setTitle("Studienverlauf: ECTS nach Semester")
 
-        # Dictionaries zum Sammeln der ECTS pro Semester
         semester_ects_geplant = {}
         semester_ects_erreicht = {}
 
@@ -87,7 +89,7 @@ class Dashboard():
                 semester_ects_geplant[sem] = 0
                 semester_ects_erreicht[sem] = 0
             
-            # Alle ECTS des Semesters summieren (Geplant)
+            # Alle ECTS des Semesters summieren
             semester_ects_geplant[sem] += kurs.ects
             
             # Nur bestanden Kurse als erreicht werten
@@ -141,6 +143,7 @@ class Dashboard():
         return chart_view
 
     def update_chart_notendifferenz(self, kurse, zielnote):
+        # Erstellt ein Balkendiagramm, das die Notendifferenz zur Zielnote pro Semester und insgesamt darstellt.
         chart = QChart()
         chart.setTitle(f"Notendifferenz zur Zielnote ({zielnote:.1f})")
 
@@ -184,6 +187,7 @@ class Dashboard():
             kategorien.append("Gesamt")
             set_delta.append(delta_gesamt)
 
+            #Füge Gesamtschnitt als Label hinzu
             set_delta.setLabel(f"Δ (Schnitt - Zielnote) | Gesamtschnitt: {gesamt_schnitt:.2f}")
         else:
             kategorien.append("Keine Noten")
@@ -207,7 +211,7 @@ class Dashboard():
         chart.addAxis(axis_y, Qt.AlignmentFlag.AlignLeft)
         series.attachAxis(axis_y)
 
-        # Darstellung verbessern
+        # Darstellung optimieren
         series.setLabelsVisible(True)
         chart.legend().setVisible(True)
         chart.legend().setAlignment(Qt.AlignmentFlag.AlignBottom)
@@ -219,10 +223,9 @@ class Dashboard():
         return chart_view
 
     def update_chart_notenentwicklung(self, kurse):
+        # Erstellt ein Liniendiagramm, das die Notenentwicklung der letzten 5 Prüfungen darstellt.
         chart = QChart()
         chart.setTitle("Notenentwicklung (letzte 5 Prüfungen)")
-        # Aktiviert eine flüssige Animation beim Laden des Diagramms
-        chart.setAnimationOptions(QChart.AnimationOption.SeriesAnimations)
 
         exams = []
         for kurs in kurse:  # Iteriert durch die übergebenen Kurse
