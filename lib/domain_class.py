@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 
 @dataclass
 class Semester:
+    # Speichert die Informationen zu einem Semester, inklusive der Kurse
     semester: int
     kurse: list["Kurs"] = field(default_factory=list)
 
@@ -9,7 +10,6 @@ class Semester:
 @dataclass
 class Kurs:
     # Speichert die Informationen zu einem Kurs, inklusive Klausuren
-    
     kurscode: str = ""
     kursname: str = ""
     ects: int = 0
@@ -26,8 +26,10 @@ class Klausur:
 
     @property
     def ergebnis(self) -> float:
+        # Gibt das Ergebnis der Klausur zurück (beim Setzen auf zwei Dezimalstellen gerundet)
         return self._ergebnis
 
     @ergebnis.setter
     def ergebnis(self, value: float):
+        # Setzt das Ergebnis der Klausur und rundet es auf zwei Dezimalstellen
         self._ergebnis = round(float(value), 2)        
