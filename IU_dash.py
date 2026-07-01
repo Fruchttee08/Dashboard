@@ -13,10 +13,10 @@ from lib.service_class import Dashboard
 
 class MainWindow:
     # Verbindung zwischen GUI und Geschäftslogik
-    def __init__(self):
+    def __init__(self, studiengang):
         # GUI laden und Datenbank initialisieren
-        self.meinStudiengang = Studiengang()
-        self.semester_liste = self.meinStudiengang.lade_datenbank()
+        self.meinStudiengang = studiengang
+        self.semester_liste = self.meinStudiengang.lade_json()
         self.kurse = []
         for semester in self.semester_liste:
             for kurs in semester.kurse:
@@ -192,17 +192,25 @@ class MainWindow:
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    # Stelle sicher, dass die Logdatei im Verzeichnis der Anwendung liegt.
-    if getattr(sys, "frozen", False):
-        base_dir = Path(sys.executable).resolve().parent
-    else:
-        # Im normalen Skriptbetrieb nutzen wir den Ordner der Quelldatei
-        base_dir = Path(__file__).resolve().parent
-    base_dir.mkdir(parents=True, exist_ok=True)
-    log_path = base_dir / "app.log"
-    logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler(str(log_path)), logging.StreamHandler()])
-    #Starte und schließe Anwendung
-    mainwindow = MainWindow()
-    mainwindow.window.showMaximized()
-    sys.exit(app.exec())
+    class Applikation():
+        def run(self):
+            app = QApplication(sys.argv)
+            # Stelle sicher, dass die Logdatei im Verzeichnis der Anwendung liegt.
+            if getattr(sys, "frozen", False):
+                base_dir = Path(sys.executable).resolve().parent
+            else:
+                base_dir = Path(__file__).resolve().parent
+            base_dir.mkdir(parents=True, exist_ok=True)
+            log_path = base_dir / "app.log"
+            logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler(str(log_path)), logging.StreamHandler()])
+    
+            #Erstelle Logik und übergieb sie an die Logik
+            meinStudiengang = Studiengang()
+
+            #Starte und schließe Anwendung
+            mainwindow = MainWindow(meinStudiengang)
+            mainwindow.window.showMaximized()
+            sys.exit(app.exec())
+
+    myApp = Applikation()
+    myApp.run()
