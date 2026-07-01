@@ -4,7 +4,7 @@ import logging
 from .domain_class import Semester, Kurs, Klausur
 from dataclasses import asdict
 
-class Datenbank():
+class JsonRepository():
     # Verwaltet das Laden und Speichern der Kursdaten in einer JSON-Datei
     def __init__(self):
         self.pfad = os.path.join(os.path.dirname(__file__), "database.json")
