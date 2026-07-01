@@ -31,5 +31,5 @@ class Klausur:
 
     @ergebnis.setter
     def ergebnis(self, value: float):
-        # Setzt das Ergebnis der Klausur und rundet es auf zwei Dezimalstellen
-        self._ergebnis = round(float(value), 2)        
+        # Setzt das Ergebnis der Klausur und rundet es auf eine Dezimalstelle
+        self._ergebnis = round(float(value), 1)        
