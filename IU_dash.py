@@ -16,7 +16,7 @@ class MainWindow:
     def __init__(self, studiengang):
         # GUI laden und Datenbank initialisieren
         self.meinStudiengang = studiengang
-        self.semester_liste = self.meinStudiengang.lade_json()
+        self.semester_liste = self.meinStudiengang.lade_datenbank()
         self.kurse = []
         for semester in self.semester_liste:
             for kurs in semester.kurse:
