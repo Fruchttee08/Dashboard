@@ -95,6 +95,6 @@ class Studiengang:
             logging.error(f"Fehler: Klausur {knr} existiert nicht oder wurde bereits storniert.")
             return False
 
-    def lade_json(self):
+    def lade_datenbank(self):
         # Lädt die Kursdatenbank und gibt eine Liste von Semester-Objekten zurück
         return self.db.lade_kurse()
