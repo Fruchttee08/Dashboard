@@ -1,14 +1,14 @@
 import logging
 import os
 from lib.domain_class import Semester, Kurs, Klausur
-from lib.repository_class import Datenbank
+from lib.repository_class import JsonRepository
 
 
 class Studiengang:
     # Hauptklasse, die die Logik für die Verwaltung der Kurse und Klausuren enthält
     def __init__(self):
         self.NAME = "Angewandte Künstliche Intelligenz"
-        self.db = Datenbank()
+        self.db = JsonRepository()
         self.BESTANDEN = "bestanden"
         self.NICHT_BESTANDEN = "nicht bestanden"
         self.STORNIERT = "storniert"
@@ -95,6 +95,6 @@ class Studiengang:
             logging.error(f"Fehler: Klausur {knr} existiert nicht oder wurde bereits storniert.")
             return False
 
-    def lade_datenbank(self):
+    def lade_json(self):
         # Lädt die Kursdatenbank und gibt eine Liste von Semester-Objekten zurück
         return self.db.lade_kurse()
